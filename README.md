@@ -1,44 +1,25 @@
 # Java 
 
 import java.util.*;
-public class Calculator{
-	public static void main(String args[]){
+public class Number_Type{
+
+	public static void main(String []args){
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Enter the first number: ");
-			double Fno =sc.nextDouble();
 
-		System.out.println("Enter the second number: ");
-			double Sno =sc.nextDouble();
+	System.out.println("Enter the number of inputs :");
+		int num =sc.nextInt();
 
-		System.out.println("Enter an operator <+,-,*,/>: ");
-			String OP =sc.next();
-		
-	switch(OP){
+		if(num % 4 == 0 && num % 128 == 0 && num % 25 ==0 && num % 100 ==0 ){
+			System.out.println("Type A & Type B");
 
-		case "+":
-			double sum=Fno+Sno;
-			System.out.println(Fno + "+"+ Sno +"= "+ sum);
-			break;
+		}else if(num % 25 == 0 && num % 100 !=0 ){
+			System.out.println("Type A");
 
-		case "-":
-			double sub=Fno-Sno;
-			System.out.println(Fno + "-"+ Sno +"= "+ sub);
-			break;
+		}else if(num % 4 == 0 && num % 128 !=0 ){
+			System.out.println("Type B");
 
-		case "*":
-			double mult=Fno*Sno;
-			System.out.println(Fno + "*"+ Sno +"= "+ mult);
-			break;
-
-		case "/":
-			double div=(Fno/Sno);
-			System.out.println(Fno + "/"+ Sno +"= "+ div);
-			break;
-		
-		default:
-			System.out.println("Incorrect Operator");
-			break;
-		}
+		}else{
+			System.out.println("Not");	
+			}	
+				
 	}
-}
